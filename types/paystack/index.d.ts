@@ -27,6 +27,8 @@ declare namespace Paystack {
 
             list: () => Promise<Response & {data?: any[] | undefined; meta?: any}>;
 
+            deactivate: (params: {authorization_code: string}) => Promise<Response>;
+
             update: (
                 id: number | string,
                 params: {first_name: string; last_name: string; email: string; phone: string},
